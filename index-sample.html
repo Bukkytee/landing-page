@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        //Basic Way
+        function Multiply(var1, var2, var3) {
+            return(var1 * var2 * var3);
+        }
+        document.write("Basic Way: " + Multiply(10, 5, 20));
+        document.write("<br>");
+
+        //Function as a Variable
+        var Multiply = function(var1, var2, var3) {
+            return(var1 * var2 * var3);
+        }
+        document.write("Function as a Variable: " + Multiply(10, 5, 20));
+        document.write("<br>");
+
+        //Self-Invoking Function
+        (function(){
+            document.write("Self invoking function. Hello, I called myself");
+        })();
+        document.write("<br>");
+
+        //User-defined functions
+        $(document).ready(function() {
+            $.fn.myFunction = function() {
+            alert("You have successfully defined the function!");
+        }
+        $('.call-btn').click(function() {
+            $.fn.myFunction();
+        });
+        });
+        document.write("<br>");
+
+        //ID Selector
+        $(document).ready(function() {
+            $("#button1").click(function() {
+                alert("jQuery ID Selector");
+            })
+        })
+        document.write("<br>");
+
+        //Class Selector
+        $(document).ready(function() {
+            $(".small").css("border", "5px solid green");
+        })
+        document.write("<br>");
+
+        //Element Selector
+        $(document).ready(function() {
+            $(".table-btn").click(function() {
+                alert($("td").length);
+            })  
+        })
+        document.write("<br>");
+
+        //Checked Selector
+        $(document).ready(function() {
+            $('#btnSubmit').click(function() {
+                var result = $("input[type = 'checkbox']:checked");
+                if(result.length > 0) {
+                    var resultString = result.length + " checkbox(es) checked <br>";
+                    result.each(function() {
+                        resultString += $(this).val() + "<br>";
+                    });
+                    $("#divResult").html(resultString);
+                }
+                else{
+                    $("#divResult").html("No checkbox checked!");
+                }
+            })
+        })
+        document.write("<br>");
+
+        //JSON
+        $(document).ready(function() {
+
+            //Creating a JSON Object
+            var employeeJSON =  {
+                "firstName" : "John",
+                "lastName" : "Doe",
+                "gender" : "Male",
+                "age" : 35,
+                "salary" : 50000
+            }
+
+            //Accessing data from a JSON Object
+            var result = '';
+            result += "First Name: " + employeeJSON.firstName + "<br>";
+            result += "Last Name: " + employeeJSON.lastName + "<br>";
+            result += "Gender: " + employeeJSON.gender + "<br>";
+            result += "Age: " + employeeJSON.age + "<br>";
+            result += "Salary: " + employeeJSON.salary + "<br>";
+
+            $("#resultDiv").html(result);
+        })
+        document.write("<br>");
+
+        //JSON Arrays and Strings
+        $(document).ready(function() {
+            var employeeJSON = [
+                {
+                    "firstName" : "John",
+                    "lastName" : "Doe",
+                    "gender" : "Male",
+                    "age" : 35,
+                    "salary" : 50000
+                },
+
+                {
+                    "firstName" : "Samantha",
+                    "lastName" : "Philips",
+                    "gender" : "Female",
+                    "age" : 27,
+                    "salary" : 40000
+                }
+            ]
+
+            //Converting JSON Array to String
+            var JSONString = JSON.stringify(employeeJSON)
+            $("#resultDiv2").html(JSONString); 
+        })
+
+        $(document).ready(function() {
+            var JSONString = '[{"firstName":"John","lastName":"Doe","gender":"Male","age":35,"salary":50000},{"firstName":"Samantha","lastName":"Philips","gender":"Female","age":27,"salary":40000}]';
+
+            var employeesJSON = JSON.parse(JSONString);
+
+            var result = '';
+
+            $.each(employeesJSON, function(i, item) {
+                result += "First Name: " + item.firstName + "<br>";
+                result += "Last Name: " + item.lastName + "<br>";
+                result += "Gender: " + item.gender + "<br>";
+                result += "Age: " + item.age + "<br>";
+                result += "Salary: " + item.salary + "<br><br>";
+            });
+            $("#resultDiv3").html(result);
+        })
+
+        //Event Delegation
+        $(document).ready(function() {
+            $("ul").on('click', 'li', function() {
+               // $(this).fadeOut(500);
+               alert("Live action triggered")
+            });
+
+            $("#btnAdd").on('click', function() {
+                $("ul").append("<li>List Item 3</li>");
+            });
+
+            $("#btnUndelegate").on('click', function() {
+                $("ul").off('click', 'li');
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Functions in jQuery</h1>
+    <button type="button" class="call-btn">Click Me</button>
+
+    <button type="button" id="button1">Click Me</button>
+
+    <span class="small">
+        Span 1
+    </span>
+    <br><br>
+
+    <div class="small">
+        Div 1
+    </div>
+
+    <span class="big">
+        Span 2
+    </span>
+
+    <div class="smaller">
+        Div 2
+    </div>
+
+    <table style="border: solid 1px black; border-collapse: collapse; padding: 5px;">
+        <tr>
+            <td>India</td>
+            <td>Germany</td>
+            <td>France</td>
+        </tr>
+        <tr>
+            <td>Europe</td>
+            <td>Asia</td>
+            <td>Australia</td>
+        </tr>
+    </table>
+    <br>
+    <button type="button" class="table-btn">Click Here</button>
+    <br><br>
+
+    Countries:
+    <input type="checkbox" name="skills" value="India"> India
+    <input type="checkbox" name="skills" value="Germany"> Germany
+    <input type="checkbox" name="skills" value="Croatia"> Croatia
+    <input type="checkbox" name="skills" value="Russia"> Russia
+    <br><br>
+    <input type="submit" value="Submit" id="btnSubmit">
+    <div id="divResult">
+
+    </div>
+
+    <br><br>
+
+    <div id="resultDiv" style="font-family: Arial, Helvetica, sans-serif;">
+
+    </div>
+
+    <br><br>
+
+    <div id="resultDiv2" style="font-family: Arial, Helvetica, sans-serif;">
+
+    </div>
+
+    <br><br>
+
+    <div id="resultDiv3" style="font-family: Arial, Helvetica, sans-serif;">
+
+    </div>
+
+    <input type="button" value="Add New List Item" id="btnAdd">
+    <input type="button" value="Undelegate" id="btnUndelegate">
+    <ul>
+        <li>List Item 1</li>
+        <li>List Item 2</li>
+    </ul>
+</body>
+</html>

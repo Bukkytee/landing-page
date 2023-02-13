@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        function myFunction() {
+            var str = "HELLO WORLD";
+            var res = str.charAt(0)
+            document.write("charAt function:" + " " + res);
+            document.write("<br>");
+
+            var str1 = " FOLKS";
+            document.write("concat function:" + " " + str.concat(str1));
+            document.write("<br>");
+
+            document.write("indexOf function:" + " " + str.indexOf("WORLD"));
+            document.write("<br>");
+
+            document.write("Length of String:" + " " + str.length);
+            document.write("<br>");
+
+            document.write("Converting to Lower Case:" + " " + str.toLowerCase());
+        }
+
+        //AJAX jQuery load() method
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("#div1").load("colors.txt");
+            });
+        });
+        
+        //Callback functions
+        $(document).ready(function() {
+            $("button").click(function() {
+                $("p").hide("slow", function() {
+                    alert("This sentence is now hidden");
+                });
+            });
+        });
+
+        //$.get function
+        $(document).ready(function() {
+            $("button").click(function() {
+                $.get("colors.txt", function(data, status) {
+                    alert("Data: " + data + "\nStatus: " + status);
+                });
+            });
+        });
+
+        //$.post function
+        $(document).ready(function() {
+            $("button").click(function() {
+                $.post("colors.txt", 
+                {
+                    name: "Bruce Wayne",
+                    city: "Gotham"
+                },
+                function(data, status) {
+                    alert("Data: " + data + "\nStatus: " + status);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>Click here to execute built-in functions in jQuery</p>
+    <button type="button" onclick="myFunction()">Click me</button>
+
+    <div id="div1">
+        <h2>Ajax Demo</h2>
+    </div>
+
+    <button>Get text file content</button>
+
+    <br><br>
+
+    <button>Hide</button>
+
+    <p>This is a sentence with little content</p>
+
+    <br><br>
+
+    <button>Get response from txt page</button>
+    <br><br>
+
+    <button>Send an HTTP Post Request and get result back</button>
+</body>
+</html>

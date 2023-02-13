@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <link rel="stylesheet" href="./css/carousel.css">
+    <link rel="shortcut icon" href="./images/favicon.ico">
+</head>
+<body>
+    <div class="container">
+        <header><h1>Kittens Carousel</h1></header>
+
+        <div class="frame">
+            <div class="all-images">
+                <img src="./images/kittens5.jpg" alt="Four kittens on a tree branch" id="img-last">
+                <img src="./images/kittens1.jpg" alt="A kiten by flowers" id="img1">
+                <img src="./images/kittens2.jpg" alt="An upside down kitten under red furniture" id="img2">
+                <img src="./images/kittens3.jpg" alt="Two kittens on a wooden plank amongst flowers" id="img3">
+                <img src="./images/kittens4.jpg" alt="Two kittens looking in the distance" id="img4">
+                <img src="./images/kittens5.jpg" alt="Four kittens on a tree branch" id="img5">
+                <img src="./images/kittens1.jpg" alt="A kiten by flowers" id="img-first">
+            </div>
+            <div class="arrrow left">
+                <img src="./images/arrow_left.png" alt="">
+                <div class="preview"></div>
+            </div>
+            <div class="arrow right">
+                <img src="./images/arrow_right.png" alt="">
+                <div class="preview"></div>
+            </div>
+
+        </div>
+
+        <div class="nav-dots">
+            <div class="active" value="1"></div>
+            <div value="2"></div>
+            <div value="3"></div>
+            <div value="4"></div>
+            <div value="5"></div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/jquery.js"></script>
+</body>
+</html>

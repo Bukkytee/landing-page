@@ -1,0 +1,225 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, sans-serif;
+    text-decoration: none;
+}
+
+.container{
+    width: 100%; 
+    background-image: url(../images/tech.png);
+    padding-left: 5%;
+    padding-right: 5%; 
+    box-sizing: border-box; 
+    position: relative;
+} 
+.content {
+    padding: 10px;
+    margin-top: 20px;
+    color: #f8f8ff;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+.logo{
+    width: 160px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.navbar{
+    width: 100%; 
+    height: 15vh; 
+    margin: auto; 
+    display: flex; 
+    align-items: center;
+}
+nav{
+    flex: 1; 
+    padding-left: 40px;
+}
+nav ul li{
+    display: inline-block; 
+    list-style: none; 
+    margin: 0 20px; 
+    text-decoration: none;
+    margin-top: 40px; 
+} 
+nav ul li a{
+    text-decoration: none;
+    color: #DDAC26
+}
+nav ul li .active{
+    font-weight: 700;
+}
+.navbutton{
+    top: 40px; 
+    right: 80px;
+    position: absolute; 
+    text-decoration: none; 
+    border: solid 2px ;
+    background-color:black;
+    border-radius: 20px;
+}
+.navbutton span{
+    display: block; 
+    padding: 6px 12px; 
+}
+.navbutton:hover{
+    background-color: rgba(255, 106, 6, 0.671);
+}
+.summary{
+    color: #f8f8ff;
+    margin-top: 50px;
+    text-align: left;
+}
+.summary span{
+    color: #DDAC26;
+}
+.overview p{
+    color: #e0e0e7d0;
+    font-size: 15px;
+    margin-left: 20px;
+    text-align: left;
+}
+.overview img{
+    float: left;
+}
+.vision{
+    width: 100%;
+    height: 260px;
+    padding-top:30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    
+    background-image: url(../images/vision.png); 
+}
+.vision span{
+    float: left;
+    text-align: left;
+    border: solid 1px #ffff;
+    padding: 60px;
+    border-radius: 60%;
+    background-color: #ae1f24c5;
+    margin-right: 30px;   
+}
+.mission{
+    width: 100%;
+    height: 260px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 30px;
+    margin-top: -30px;
+    background-image: url(../images/Network.png);
+}
+.mission span{
+    float: right;
+    text-align: right;
+    margin-left: 30px;
+    border: solid 2px #ffff;
+    border-radius: 200px;
+    padding: 60px;
+    background-color: #ddac26ce;
+}
+.corevalues{
+    width: 100%;
+    height: 300px;
+    padding-left: 10px;
+    padding-right: 30px;
+    padding-top: 30px;
+    margin-top: -30px;
+    background-image: url(../images/values.png);
+}
+.corevalues ul{
+    list-style: none;
+    
+}
+.corevalues h2{
+    color: #DDAC26;
+}
+.corevalues p{
+    color: #f8f8ffb0;
+}
+.value1{
+    
+    text-align: left;
+}
+.value2{
+    text-align: left;
+    margin-left: 20px;
+}
+.main{
+    display: flex;
+}
+.customerpolicy{
+    width: 100%;
+    height: 260px;
+   padding: 20px;
+    text-align: left;
+    background-image: url(../images/policy.png);
+}
+.customerpolicy span{
+    float: left;
+    text-align: left;   
+}
+.partner h1{
+    color: #DDAC26;
+}
+.first{
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    text-align: left;
+    color: #f8f8ff
+}
+.first img{
+    float: right;
+    width: 350px;
+    border: solid 1px;
+    background-color: #f8f8ff88;
+    padding: 5px;
+    margin-top: 40px;
+}
+.first p{
+    color: #f8f8ff96;
+}
+.second{
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    text-align: left;
+    color: #f8f8ff;
+}
+.second img{
+    width: 300px;
+    float: right;
+    margin-top: 50px;
+}
+.second p{
+    color: #f8f8ff9c;
+}
+.third{
+    display: inline-block;
+    width: 100%;
+    margin-top: 20px;
+    padding: 15px;
+    text-align: left;
+    color: #f8f8ff;
+}
+.third img{
+    width: 300px;
+    float: right;
+    margin-top: 50px;
+}
+.third p{
+    color: #f8f8ff9c;
+}
+.third ul{
+    color: #f8f8ff9c;
+}
+.third b{
+    color: #f8f8ff;
+}

@@ -1,0 +1,17 @@
+body{background-color:rgba(0, 128, 0, 0.5);}
+
+p{font-family:arial; color:black}/*for better view*/
+		
+		.first{border:solid 1px #000; padding:50px; width:300px; background-color:blue;opacity:0.8; width:50%; position:relative font-size 10px}
+			
+			 .first h2{color:red}
+	
+			 .second h2{color:#90ee90}
+			
+			.second{border:solid 1px #000; padding:50px; width:300px; margin-top:20px; background-color:black; width:50%}
+			
+			.first p{color:white; }	
+			
+		.second p{color:white}
+		
+		

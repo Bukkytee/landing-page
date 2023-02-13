@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/voters.css">
+    <title>Voters' Registration</title>
+</head>
+<body>
+    <h1>Voters' Registration Form</h1>
+    <p><strong>Note:</strong> Participants must be 18 years and older!</p>
+
+    <form>
+		<Input type="text" id="name" name="firstname" placeholder="First name" required/><br/><br/>
+		<Input type="text" id="name" name="lastname" placeholder="Last name" required/><br/><br/>
+        <input type="number" name="age" id="age" placeholder="Age" required><br><br>
+		<Input type="text" id="name" name="phoneno" placeholder="Phone No"/><br/><br/>
+		<Input type="text" id="name" name="username" placeholder="Username" required/><br/><br/>
+        <input type="text" id="email" name="email address" placeholder="E-mail Address"><br><br>
+		<Input type="password" id="password" name="password" placeholder="Password" required onkeyup="check()"/><br/><br/>
+        <Input type="password" id="confirm_password" name="password" placeholder="Confirm Password" onkeyup="check()" required/>
+        <span id="message"></span>
+        <br/><br/>
+		<textarea name="address" id="address" placeholder="Address"></textarea><br/><br/>
+        Gender: <Input type="radio" name="gender"/>
+				<label for="male" name="male">Male</label>
+				<Input type="radio" name="gender"/>
+				<label for="female" name="female">Female</label><br/><br/>
+        <input type="submit" onclick="myFunction()" value="Submit">
+    </form>
+
+</body>
+<script src="./js/voters.js"></script>
+</html>

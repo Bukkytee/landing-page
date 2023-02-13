@@ -1,0 +1,6 @@
+#42246E first container background color
+#E5E1DE banner background color
+#D193A2 language school color
+#342248 any language you want color
+#F73C80 find a course button background color
+#F4BC2B home button background color

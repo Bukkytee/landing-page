@@ -1,0 +1,13 @@
+body{background-color: black;}
+h1{color: red;}
+p{color: #333;}
+.one {padding: 10px; background-color: skyblue; text-align: center;display: inline-block; width: 100%; box-sizing: border-box;}
+/*.two {padding: 10px; background-color: #f2f2f2; width: 100%; text-align: center;}*/
+    .first{float: left; border: solid 1px #000; margin-right: 20px; width: 500px;  padding: 20px; margin-top: 40px; text-align: left;}
+    .second{float: left; border:solid 1px #000; margin-right: 20px; width: 200px ; height: 303px; padding: 20px; margin-top: 40px;}
+    .third{float: left; border: solid 1px #000; margin-right: 20px; width: 200px ; height: 303px; padding: 20px; margin-top: 40px;}
+    
+    .first, .second, .third{background-color: white;}
+    .second:hover{background-color: purple;}
+    .third:hover{background-color: red;}
+    .first span{font-size: 32px;}

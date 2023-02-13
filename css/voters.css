@@ -1,0 +1,83 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f1f1f1;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+h1{
+    color: #08B3AA;
+}
+input[type=text], select{
+    width: 180px;
+    height: 30px;
+    padding: 5px 8px;
+    margin-top: 10px;
+    display: inline-block;
+    border: solid 1px #08B3AA;
+    background-color: #EEEEEE;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+input[type=number], select{
+    width: 180px;
+    height: 30px;
+    padding: 5px 8px;
+    margin-top: 10px;
+    display: inline-block;
+    border: solid 1px #08B3AA;
+    background-color: #EEEEEE;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+input[type=password], select{
+    width: 180px;
+    height: 30px;
+    padding: 5px 8px;
+    margin-top: 10px;
+    display: inline-block;
+    border: solid 1px #08B3AA;
+    background-color: #EEEEEE;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+input[type=submit] {
+    border: solid 1px #08B3AA;
+    background-color: #f1f1f1;
+    border-radius: 4px;
+    float: right;
+    padding: 10px 15px;
+    color: #08B3AA;
+    margin-top: 5px;
+}
+input[type=submit]:hover{
+    color: #EEEEEE;
+    background-color: #08B3AA;
+}
+#name{
+    width: 50%;
+}
+#email{
+    width: 50%;
+}
+#password, #confirm_password{
+    width: 50%;
+}
+#age{
+    width: 50%;
+}
+#address{
+    width: 50%;
+    height: 20vh;
+}
+textarea{
+    border: solid 1px #08B3AA;
+    background-color: #EEEEEE;
+    padding: 10px 8px;
+    text-align: left;
+    margin-top: 10px;
+    resize: none;
+}
